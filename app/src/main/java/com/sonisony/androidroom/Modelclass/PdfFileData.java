@@ -5,7 +5,10 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import lombok.ToString;
+
 @Entity(tableName = "pdf_file_tbl")
+@ToString
 public class PdfFileData {
     @PrimaryKey(autoGenerate = true)
     private int ID;

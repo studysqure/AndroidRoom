@@ -19,6 +19,17 @@
         android:gravity="center"
         android:background="@color/teal_700"
         />
+    <TextView
+        android:id="@+id/sync_data_btn"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:text="Sync Data "
+        android:gravity="center"
+        android:background="@color/teal_700"
+        />
 
 
     <EditText
