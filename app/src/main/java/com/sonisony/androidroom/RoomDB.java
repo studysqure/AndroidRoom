@@ -6,8 +6,11 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+import com.sonisony.androidroom.DaoFile.PdfSaveDao;
+import com.sonisony.androidroom.Modelclass.PdfFileData;
+
 //add data base entities
-@Database(entities = {MainData.class},version = 1,exportSchema = false)
+@Database(entities = {MainData.class, PdfFileData.class},version = 1,exportSchema = false)
 public abstract class RoomDB extends RoomDatabase {
     //create database instance
     private static RoomDB database;
@@ -30,5 +33,7 @@ public abstract class RoomDB extends RoomDatabase {
     }
 //    create dao
     public abstract MainDao mainDao();
+    public abstract PdfSaveDao pdfSaveDao();
+
 
 }

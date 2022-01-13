@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -17,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private Button add_btn,reset_btn;
     private EditText enter_txt;
-
+    private TextView read_pdf_txt;
     List<MainData> dataList = new ArrayList<>();
     LinearLayoutManager linearLayoutManager;
     RoomDB database;
@@ -31,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         add_btn = findViewById(R.id.add_btn);
         reset_btn = findViewById(R.id.reset_btn);
         enter_txt = findViewById(R.id.enter_txt_et);
-
+        read_pdf_txt = findViewById(R.id.read_pdf_txt);
         //Initalize database
         database = RoomDB.getInstance(this);
 
@@ -70,6 +72,12 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        read_pdf_txt.setOnClickListener(v -> {
+            Intent i = new Intent(MainActivity.this,PDFLoaderActivity.class);
+            startActivity(i);
+        });
+
 reset_btn.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {

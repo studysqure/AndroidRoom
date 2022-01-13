@@ -8,6 +8,19 @@
     tools:context=".MainActivity">
 
 
+    <TextView
+        android:id="@+id/read_pdf_txt"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:text="View Brouser"
+        android:gravity="center"
+        android:background="@color/teal_700"
+        />
+
+
     <EditText
         android:id="@+id/enter_txt_et"
         android:layout_width="match_parent"
